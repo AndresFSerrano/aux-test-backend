@@ -20,7 +20,7 @@ public class ProductEntity {
     @Column(name = "PRODUCT_PRICE", nullable = false, unique = true)
     private BigDecimal productPrice;
 
-    @Column(name = "PRODUCT_IMAGE", nullable = false, unique = true)
+    @Column(name = "PRODUCT_IMAGE")
     private String productImage;
 
 }
