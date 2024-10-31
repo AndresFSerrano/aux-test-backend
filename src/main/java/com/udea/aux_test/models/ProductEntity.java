@@ -14,13 +14,13 @@ public class ProductEntity {
     @Column(name = "PRODUCT_ID")
     private Long productId;
 
-    @Column(name = "PRODUCT_NAME")
+    @Column(name = "PRODUCT_NAME", nullable = false, unique = true)
     private String productName;
 
-    @Column(name = "PRODUCT_PRICE")
+    @Column(name = "PRODUCT_PRICE", nullable = false, unique = true)
     private BigDecimal productPrice;
 
-    @Column(name = "PRODUCT_IMAGE")
+    @Column(name = "PRODUCT_IMAGE", nullable = false, unique = true)
     private String productImage;
 
 }

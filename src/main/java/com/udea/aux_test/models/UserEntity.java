@@ -9,17 +9,16 @@ import lombok.Data;
 public class UserEntity {
 
     @Id
-    @Column(name = "USER_ID")
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "USER_ID")
     private Long userId;
 
-    @Column(name = "USER_NAME")
-    private String userName;
+    @Column(name = "USERNAME", nullable = false, unique = true)
+    private String username;
 
-    @Column(name = "USER_EMAIL")
-    private String userEmail;
+    @Column(name = "EMAIL", nullable = false, unique = true)
+    private String email;
 
-    @Column(name = "USER_PASSWORD")
+    @Column(name = "PASSWORD", nullable = false)
     private String password;
-
 }
